@@ -1,6 +1,6 @@
 package coinflipping_dnd;
 
-public class NameArrays<E> {
+public class NameArrays {
 	static String[] monsters = {
 		"slime", "skeleton", "spirit", "goblin", "wolf",
 		"fairy"
