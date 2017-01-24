@@ -1,19 +1,19 @@
 package coinflipping_dnd;
 
 public class NameArrays {
-	static String[] monsters = {
+	static String[] nouns = {
 		"slime", "skeleton", "spirit", "goblin", "wolf",
-		"fairy"
+		"fairy", "owlbear"
 	};
 	
 	static Coinflip flip = new Coinflip();
-	static int sizeOfMonsters = monsters.length - 1;
+	static int numberOfNouns = nouns.length - 1;
 	
 	public static void main(String[] args) {
-		System.out.println(monsters[flip.Flip(sizeOfMonsters)]);
-		System.out.println(monsters[flip.Flip(sizeOfMonsters)]);
-		System.out.println(monsters[flip.Flip(sizeOfMonsters)]);
-		System.out.println(monsters[flip.Flip(sizeOfMonsters)]);
-		System.out.println(monsters[flip.Flip(sizeOfMonsters)]);
+		System.out.println(nouns[flip.Flip(numberOfNouns)]);
+		System.out.println(nouns[flip.Flip(numberOfNouns)]);
+		System.out.println(nouns[flip.Flip(numberOfNouns)]);
+		System.out.println(nouns[flip.Flip(numberOfNouns)]);
+		System.out.println(nouns[flip.Flip(numberOfNouns)]);
 	}
 }
