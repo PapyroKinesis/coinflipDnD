@@ -6,12 +6,12 @@ public class NameArrays {
 		"fairy", "group of owlbears"
 	};
 	
-	static String[][][] sentences = {
+	static String[][] sentences = {
 			{
 				"Off in the distance ", "Around the corner ", "Nearby "
 			},
 			{
-				"rests a ", "is a ", "you see a ", 
+				"rests a ", "is a ", "you see a "
 			},
 			{
 				" in the road.", " in a small copse of trees.", " on the ground."
