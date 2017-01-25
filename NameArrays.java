@@ -7,16 +7,16 @@ public class NameArrays {
 	};
 	
 	public static String[][] sentences = {
-			{
+			{	//proximityFrag
 				"Off in the distance ", "Around the corner ", "Nearby "
 			},
-			{
+			{	//verbFrag
 				"rests a ", "is a ", "you see a "
 			},
-			{
+			{	//prepFrag
 				" in the road.", " in a small copse of trees.", " on the ground."
 			},
-			{
+			{	//punct
 				".", "!"
 
 			}
