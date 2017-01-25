@@ -3,7 +3,7 @@ package coinflip_dnd;
 public class NameArrays {
 	public static String[] nouns = {
 		"slime", "skeleton", "spirit", "goblin", "wolf",
-		"fairy", "owlbear"
+		"fairy", "group of owlbears"
 	};
 	
 	public static String[][] sentences = {
@@ -18,6 +18,7 @@ public class NameArrays {
 			},
 			{
 				".", "!"
+
 			}
 	};
 	
@@ -27,14 +28,7 @@ public class NameArrays {
 	public static int numberOfSentences = sentences.length - 1;
 	
 	public static void main(String[] args) {
-		/*
-		System.out.println(nouns[flip.Flip(numberOfNouns)]);
-		System.out.println(nouns[flip.Flip(numberOfNouns)]);
-		System.out.println(nouns[flip.Flip(numberOfNouns)]);
-		System.out.println(nouns[flip.Flip(numberOfNouns)]);
-		System.out.println(nouns[flip.Flip(numberOfNouns)]);
-		*/
 		generate.Sentence();
-		
+
 	}
 }
