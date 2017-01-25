@@ -1,4 +1,4 @@
-package coinflipping_dnd;
+package coinflip_dnd;
 
 public class Coinflip {
 	int Flip(int die) {
