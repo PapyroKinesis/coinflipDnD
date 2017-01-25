@@ -3,15 +3,18 @@ package coinflip_dnd;
 public class NameArrays {
 	static String[] nouns = {
 		"slime", "skeleton", "spirit", "goblin", "wolf",
-		"fairy", "owlbear"
+		"fairy", "group of owlbears"
 	};
 	
 	static String[][] sentences = {
 			{
-				"There is a ", "Visible is a "
+				"Off in the distance ", "Around the corner ", "Nearby "
 			},
 			{
-				" far away.", " in the distance."
+				"rests a ", "is a ", "you see a "
+			},
+			{
+				" in the road.", " in a small copse of trees.", " on the ground."
 			}
 	};
 	
