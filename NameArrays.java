@@ -1,33 +1,52 @@
 package coinflip_dnd;
 
 public class NameArrays {
-	static String[] nouns = {
-		"slime", "skeleton", "spirit", "goblin", "wolf",
-		"fairy", "group of owlbears"
-	};
-	
-	static String[][] sentences = {
-			{
-				"Off in the distance ", "Around the corner ", "Nearby "
-			},
-			{
-				"rests a ", "is a ", "you see a "
-			},
-			{
-				" in the road.", " in a small copse of trees.", " on the ground."
-			}
-	};
-	
-	static Coinflip flip = new Coinflip();
-	static int numberOfNouns = nouns.length - 1;
-	static int numberOfSentences = sentences.length - 1;
-	
-	public static void main(String[] args) {
-		System.out.println(nouns[flip.Flip(numberOfNouns)]);
-		System.out.println(nouns[flip.Flip(numberOfNouns)]);
-		System.out.println(nouns[flip.Flip(numberOfNouns)]);
-		System.out.println(nouns[flip.Flip(numberOfNouns)]);
-		System.out.println(nouns[flip.Flip(numberOfNouns)]);
-		
-	}
+    // Character statistics
+    static int hp = 10;
+    static int atk = 1;
+    
+    
+    public static String[] nouns = {
+        "slime", "skeleton", "spirit", "goblin", "wolf",
+        "fairy", "group of owlbears"
+    };
+    
+    public static String[][] sentences = {
+            {   //proximityFrag
+                "Off in the distance ", "Around the corner ", "Nearby "
+            },
+            {   //verbFrag
+                "rests a ", "is a ", "you see a "
+            },
+            {   //prepFrag
+                " in the road.", " in a small copse of trees.", " on the ground."
+            },
+            {   //punct
+                ".", "!"
+            }
+    };
+    
+    public static String[][] environments = {
+            {   //generalAdj
+                " spooky", " bright", " lovely", "n unpleasant", " depressing", " dank"
+            },
+            {   //generalLocation
+                " castle", " field", " forest path", " clearing",
+            }
+    };
+    
+    static Coinflip flip = new Coinflip();
+    static Sentence generate = new Sentence();
+    static Environment worldgen = new Environment();
+    static int numberOfNouns = nouns.length - 1;
+    public static int numberOfSentences = sentences.length - 1;
+    
+    
+    // Run the program!
+    public static void main(String[] args) {
+        worldgen.EnvironmentDescription();
+        generate.Sentence();
+        // System.out.println(Sentence.monster);
+        BattleSim.BattleSim();
+    }
 }
