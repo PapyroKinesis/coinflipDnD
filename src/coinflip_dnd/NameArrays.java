@@ -1,7 +1,7 @@
 package coinflip_dnd;
 
 public class NameArrays {
-    hp = 10;
+    static hp = 10;
     
     
     public static String[] nouns = {
