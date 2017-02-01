@@ -1,6 +1,9 @@
 package coinflip_dnd;
 
 public class NameArrays {
+    hp = 10;
+    
+    
     public static String[] nouns = {
         "slime", "skeleton", "spirit", "goblin", "wolf",
         "fairy", "group of owlbears"
