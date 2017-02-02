@@ -3,6 +3,7 @@ package coinflip_dnd;
 public class NameArrays {
     static int hp = 10;
     static int atk = 1;
+   	static int mLvl = 1;
     
     public static String[] nouns = {
         "slime", "skeleton", "spirit", "goblin", "wolf",
@@ -33,6 +34,7 @@ public class NameArrays {
             }
     };
     
+
     
     static Coinflip flip = new Coinflip();
     static Sentence generate = new Sentence();
@@ -40,11 +42,18 @@ public class NameArrays {
     static int numberOfNouns = nouns.length - 1;
     public static int numberOfSentences = sentences.length - 1;
     
+    public static void Run() {
+    	generate.Sentence();
+    	Monster victim = new Monster();
+        Monster.setUp();
+    	victim.setLvl();
+    	victim.setHp();
+    	BattleSim.start = 0;
+        BattleSim.BattleSim();
+    }
     
     // Run the program!
     public static void main(String[] args) {
-        worldgen.EnvironmentDescription();
-        generate.Sentence();
-        BattleSim.BattleSim();
+        Run();
     }
 }
