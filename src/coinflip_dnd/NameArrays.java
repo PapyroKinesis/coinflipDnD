@@ -24,16 +24,27 @@ public class NameArrays {
             }
     };
     
+    public static String[][] environments = {
+            {   //generalAdj
+                " spooky", " bright", " lovely", "n unpleasant", " depressing", " dank", " peculiar"
+            },
+            {   //generalLocation
+                " castle", " field", " ruin", " forest", " clearing"
+            }
+    };
+    
+    
     static Coinflip flip = new Coinflip();
     static Sentence generate = new Sentence();
+    static Environment worldgen = new Environment();
     static int numberOfNouns = nouns.length - 1;
     public static int numberOfSentences = sentences.length - 1;
     
     
     // Run the program!
     public static void main(String[] args) {
+        worldgen.EnvironmentDescription();
         generate.Sentence();
-        // System.out.println(Sentence.monster);
         BattleSim.BattleSim();
     }
 }
