@@ -2,7 +2,7 @@ package coinflip_dnd;
 
 public class NameArrays {
     static int hp = 10;
-    
+    static int atk = 1;
     
     public static String[] nouns = {
         "slime", "skeleton", "spirit", "goblin", "wolf",
