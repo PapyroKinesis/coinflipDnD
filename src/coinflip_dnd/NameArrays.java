@@ -43,6 +43,7 @@ public class NameArrays {
     public static int numberOfSentences = sentences.length - 1;
     
     public static void Run() {
+        worldgen.EnvironmentDescription();
     	generate.Sentence();
     	Monster victim = new Monster();
         Monster.setUp();
