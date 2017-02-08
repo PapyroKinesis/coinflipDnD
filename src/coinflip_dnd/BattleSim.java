@@ -6,10 +6,12 @@ import com.sun.xml.internal.bind.v2.runtime.Name;
 
 public class BattleSim {
 	String name = Sentence.monster;
+	// Monster victim = new Monster();
 	static int start = 0;
 
 	public static void BattleSim() {
 		if (start < 1) {
+			NameArrays.generate.Sentence();
 			System.out.println("The " + Sentence.monster + " engages in battle!");
 			System.out.println("It is level " + NameArrays.victim.lvl + " with " + NameArrays.victim.hpM + " hitpoint(s)!");
 		}
