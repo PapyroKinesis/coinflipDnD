@@ -1,11 +1,13 @@
 package coinflip_dnd;
 
 public class NameArrays {
-    static int hp = 10;
-    static int atk = 1;
-    static int mLvl = 1;
-    
-    public static String[] nouns = {
+	//Character statistics
+	static int hp = 10;
+	static int atk = 1;
+	static int mLvl = 1;
+	static int potions = 0;
+	
+	public static String[] nouns = {
         "slime", "skeleton", "spirit", "goblin", "wolf",
         "fairy", "group of owlbears"
     };
@@ -24,17 +26,16 @@ public class NameArrays {
                 ".", "!"
             }
     };
-    
     public static String[][] environments = {
             {   //generalAdj
-                " spooky", " bright", " lovely", "n unpleasant", " depressing", " dank", " peculiar"
+                " spooky", " bright", " lovely", "n unpleasant",
+                " depressing", " dank", " peculiar"
             },
             {   //generalLocation
-                " castle", " field", " ruin", " forest", " clearing"
+                " castle", " field", " ruin",
+                " forest", " clearing"
             }
     };
-    
-
     
     static Coinflip flip = new Coinflip();
     static Sentence generate = new Sentence();
@@ -42,19 +43,24 @@ public class NameArrays {
     static int numberOfNouns = nouns.length - 1;
     public static int numberOfSentences = sentences.length - 1;
     
+    static Monster victim = new Monster();
+    
     public static void Run() {
-        worldgen.EnvironmentDescription();
-    	generate.Sentence();
+    	worldgen.EnvironmentDescription();
+    	//generate.Sentence();
     	Monster victim = new Monster();
         Monster.setUp();
     	victim.setLvl();
     	victim.setHp();
+    	
     	BattleSim.start = 0;
-        BattleSim.BattleSim();
+        //BattleSim.BattleSim();
+    	Navigate.Navigate();
     }
     
     // Run the program!
     public static void main(String[] args) {
-        Run();
+    	//Run();
+    	Navigate.Navigate();
     }
 }
