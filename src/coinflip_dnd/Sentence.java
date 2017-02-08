@@ -19,13 +19,13 @@ public class Sentence {
                 + monster + fragments[3][roll.Flip(punct)]);
     }
     
-    public static boolean Attack() {
+    public static String Attack() {
         int hit = roll.Flip(1);
         if(hit == 0) {
-            return false;
+            return "tails";
         }
         else {
-            return true;
+            return "heads";
         }
     }
 }
