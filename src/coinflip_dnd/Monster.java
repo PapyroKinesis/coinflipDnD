@@ -1,36 +1,42 @@
 package coinflip_dnd;
 
 public class Monster {
-	// Monster statistics
-	static int hpM = 1;
-	static int atkMonster = 1;
-	static int lvl = 1;
-	static String name = Sentence.monster;
-	static int[][] levels = {
-			{
-				1, 2
-			},
-			{
-				1, 2, 3
-			}
-	};
-
-	public void setLvl() {
-		lvl = Coinflip.Flip(NameArrays.mLvl);
-		if (lvl < 1) {
-			lvl = 1;
-		}
+	private int hitPoints;
+	private int mobAttack;
+	private int level;
+	private String mobName;
+	
+	
+	public Monster(int lvl, String name){
+		level = lvl;
+		mobName = name;
+		hitPoints = level; //the hitpoints are the level
+		mobAttack = level +((int) (Math.random()*3)-1);
 	}
-	public void setHp() {
-		this.hpM = levels[this.lvl][Coinflip.Flip(levels[lvl].length - 1)];
+	
+	public void setHP(int set){
+		hitPoints = set;
 	}
-	public static void setUp() {
-		hpM = 1;
-		atkMonster = 1;
-		lvl = 1;
-		name = Sentence.monster;
+	
+	public void setName(String name){
+		mobName = name;
 	}
-    public Monster() {
+	
+	public int getHP(){
+		return hitPoints;
 	}
+	
+	public int getLevel(){
+		return level;
+	}
+	
+	public int getAtk(){
+		return mobAttack;
+	}
+	
+	public String getName(){
+		return mobName;
+	}
+	
 }
     

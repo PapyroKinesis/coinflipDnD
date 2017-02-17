@@ -1,16 +1,16 @@
 package coinflip_dnd;
 
-public class NameArrays {
+public class NameArrays {//OBSOLETE - FASE OUT ASAP
     static int hp = 10;
     static int atk = 1;
     static int mLvl = 1;
     
-    public static String[] nouns = {
+    public String[] nouns = {
         "slime", "skeleton", "spirit", "goblin", "wolf",
         "fairy", "group of owlbears"
     };
     
-    public static String[][] sentences = {
+    public String[][] sentences = {
             {   //proximityFrag
                 "Off in the distance ", "Around the corner ", "Nearby "
             },
@@ -25,36 +25,24 @@ public class NameArrays {
             }
     };
     
-    public static String[][] environments = {
+    public String[][] environments = {
             {   //generalAdj
-                " spooky", " bright", " lovely", "n unpleasant", " depressing", " dank", " peculiar"
+                " spooky", " bright", " lovely", "n unpleasant", " depressing", " dank", " peculiar", " disappointing"
             },
             {   //generalLocation
-                " castle", " field", " ruin", " forest", " clearing"
+                " castle", " field", " ruin", " forest", " clearing", " hellscape"
             }
     };
     
 
     
-    static Coinflip flip = new Coinflip();
-    static Sentence generate = new Sentence();
-    static Environment worldgen = new Environment();
-    static int numberOfNouns = nouns.length - 1;
-    public static int numberOfSentences = sentences.length - 1;
+    Coinflip flip = new Coinflip();
+    Sentence generate = new Sentence();
+    Environment worldgen = new Environment();
+    int numberOfNouns = nouns.length - 1;
+    public int numberOfSentences = sentences.length - 1;
     
-    public static void Run() {
-        worldgen.EnvironmentDescription();
-    	generate.Sentence();
-    	Monster victim = new Monster();
-        Monster.setUp();
-    	victim.setLvl();
-    	victim.setHp();
-    	BattleSim.start = 0;
-        BattleSim.BattleSim();
-    }
     
-    // Run the program!
-    public static void main(String[] args) {
-        Run();
-    }
+    
+
 }

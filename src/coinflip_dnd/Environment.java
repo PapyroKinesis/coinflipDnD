@@ -1,6 +1,6 @@
 package coinflip_dnd;
 
-public class Environment {
+public class Environment { //OBSOLETE - FASE OUT ASAP
 
     static Coinflip roll = new Coinflip();
     
@@ -17,7 +17,7 @@ public class Environment {
     int generalAdj = environments[0].length - 1;
     int generalLocation = environments[1].length - 1;
     
-    public void EnvironmentDescription(){
+    public static void EnvironmentDescription(){
         
         System.out.println("You are in a" + environments[0][roll.Flip(generalAdj)] + environments[1][roll.Flip(generalLocation)] 
                 + fragments[3][roll.Flip(punctuation)]);
